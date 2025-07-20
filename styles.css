@@ -26,23 +26,35 @@ body::before {
   opacity: 0.25;
 }
 
+.tagline {
+  font-family: 'Lato', 'Segoe UI', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: #b2bff7;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.7rem;
+  text-shadow: 0 1px 8px #a3bcf9;
+}
+
 .hero {
   text-align: center;
   color: #fff;
   position: relative;
   z-index: 1;
-  padding: 2.5rem 2rem 2rem 2rem;
+  padding: 3.2rem 2rem 2.5rem 2rem;
   border-radius: 2rem;
   box-shadow: 0 8px 32px 0 rgba(44, 62, 80, 0.25);
   background: rgba(35, 41, 70, 0.55);
   backdrop-filter: blur(2px);
+  max-width: 480px;
+  margin: 2.5rem auto;
 }
 
 .headline {
-  font-size: 3.2rem;
+  font-size: 3.4rem;
   letter-spacing: 0.18em;
   display: inline-block;
-  margin-bottom: 0.7rem;
+  margin-bottom: 1.1rem;
   text-shadow: 0 2px 16px #a3bcf9, 0 0 2px #fff;
 }
 
@@ -100,37 +112,38 @@ body::before {
 }
 
 .subtitle {
-  font-size: 1.25rem;
-  margin: 1.1rem 0 0.7rem 0;
+  font-size: 1.28rem;
+  margin: 1.2rem 0 0.8rem 0;
   color: #e0e7ff;
   letter-spacing: 0.08em;
   text-shadow: 0 1px 8px #a3bcf9;
 }
 
 .description {
-  font-size: 1.05rem;
+  font-size: 1.09rem;
   color: #d6e0f5;
-  margin: 0.7rem 0 1.2rem 0;
+  margin: 0.9rem 0 1.5rem 0;
   max-width: 420px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.6;
+  line-height: 1.7;
   text-shadow: 0 1px 6px #a3bcf9;
 }
 
 .cta {
   display: inline-block;
-  padding: 0.9rem 2.3rem;
+  padding: 1.1rem 2.6rem;
   background: linear-gradient(90deg, #a3bcf9 0%, #f9f9f9 100%);
   color: #232946;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 1.2rem;
-  font-size: 1.15rem;
+  margin-top: 1.7rem;
+  font-size: 1.22rem;
   box-shadow: 0 4px 24px #a3bcf9a0;
   transition: transform 0.2s, box-shadow 0.2s, background 0.3s, color 0.3s;
   animation: pulse 2.2s infinite;
+  letter-spacing: 0.08em;
 }
 
 .cta:hover {
