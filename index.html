@@ -58,6 +58,7 @@
         <input type="email" name="email" placeholder="Your Email" required />
         <button type="submit" class="modal-submit">Sign Up</button>
       </form>
+      <div class="modal-success" style="display:none;">Thank you for signing up! Sweet dreams await.</div>
     </div>
   </div>
   <audio id="ambient-audio" src="https://cdn.pixabay.com/audio/2022/10/16/audio_12b6b0b6b2.mp3" loop></audio>
@@ -107,6 +108,35 @@
         ease: 'power2.out',
         delay: i * 0.1
       });
+    });
+
+    const modalOverlay = document.querySelector('.modal-overlay');
+    const modal = document.querySelector('.modal');
+    const signupForm = document.querySelector('.signup-form');
+    const modalSuccess = document.querySelector('.modal-success');
+    const modalCloseBtn = document.querySelector('.modal-close');
+    const signupBtn = document.querySelector('.signup-btn');
+
+    function openModal() {
+      modalOverlay.style.display = 'flex';
+      gsap.fromTo(modal, {scale: 0.7, opacity: 0}, {scale: 1, opacity: 1, duration: 0.45, ease: 'power3.out'});
+      signupForm.style.display = '';
+      modalSuccess.style.display = 'none';
+    }
+    function closeModal() {
+      gsap.to(modal, {scale: 0.7, opacity: 0, duration: 0.32, ease: 'power2.in', onComplete: () => {
+        modalOverlay.style.display = 'none';
+      }});
+    }
+    signupBtn.addEventListener('click', openModal);
+    modalCloseBtn.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) closeModal();
+    });
+    signupForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      signupForm.style.display = 'none';
+      modalSuccess.style.display = 'block';
     });
   </script>
 </body>

@@ -415,8 +415,8 @@ html {
 
 .audio-toggle {
   position: fixed;
-  top: 1.1rem;
-  right: 1.2rem;
+  bottom: 1.5rem;
+  right: 1.5rem;
   z-index: 2100;
   background: rgba(35, 41, 70, 0.85);
   border: none;
@@ -435,4 +435,16 @@ html {
 .audio-toggle:hover {
   background: #a3bcf9;
   color: #232946;
+}
+
+.modal-success {
+  display: none;
+  color: #a3bcf9;
+  font-size: 1.18rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-shadow: 0 0 12px #a3bcf9, 0 0 24px #fff;
+  line-height: 1.5;
 }
