@@ -48,25 +48,55 @@ body::before {
 
 .headline span {
   display: inline-block;
-  animation: wave 1.6s infinite ease-in-out;
+  animation: wave-bounce 1.4s infinite cubic-bezier(.68,-0.55,.27,1.55);
   color: #e0e7ff;
-  text-shadow: 0 0 12px #a3bcf9, 0 0 24px #fff;
+  text-shadow: 0 0 16px #a3bcf9, 0 0 32px #fff;
 }
-.headline span:nth-child(2) { animation-delay: 0.1s; }
-.headline span:nth-child(3) { animation-delay: 0.2s; }
-.headline span:nth-child(4) { animation-delay: 0.3s; }
-.headline span:nth-child(5) { animation-delay: 0.4s; }
-.headline span:nth-child(6) { animation-delay: 0.5s; }
-.headline span:nth-child(7) { animation-delay: 0.6s; }
-.headline span:nth-child(8) { animation-delay: 0.7s; }
-.headline span:nth-child(9) { animation-delay: 0.8s; }
+.headline span:nth-child(2) { animation-delay: 0.12s; }
+.headline span:nth-child(3) { animation-delay: 0.24s; }
+.headline span:nth-child(4) { animation-delay: 0.36s; }
+.headline span:nth-child(5) { animation-delay: 0.48s; }
+.headline span:nth-child(6) { animation-delay: 0.60s; }
+.headline span:nth-child(7) { animation-delay: 0.72s; }
+.headline span:nth-child(8) { animation-delay: 0.84s; }
+.headline span:nth-child(9) { animation-delay: 0.96s; }
 
-@keyframes wave {
-  0%, 100% { transform: translateY(0) scale(1); }
-  20% { transform: translateY(-12px) scale(1.1); }
-  40% { transform: translateY(0) scale(1); }
-  60% { transform: translateY(8px) scale(0.95); }
-  80% { transform: translateY(0) scale(1); }
+@keyframes wave-bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    color: #e0e7ff;
+    text-shadow: 0 0 16px #a3bcf9, 0 0 32px #fff;
+  }
+  10% {
+    transform: translateY(-18px) scale(1.18) rotate(-6deg);
+    color: #a3bcf9;
+    text-shadow: 0 0 32px #fff, 0 0 48px #a3bcf9;
+  }
+  20% {
+    transform: translateY(-24px) scale(1.22) rotate(6deg);
+    color: #fff;
+    text-shadow: 0 0 40px #fff, 0 0 64px #a3bcf9;
+  }
+  30% {
+    transform: translateY(-12px) scale(1.12) rotate(-4deg);
+    color: #e0e7ff;
+    text-shadow: 0 0 24px #a3bcf9, 0 0 32px #fff;
+  }
+  40% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    color: #a3bcf9;
+    text-shadow: 0 0 16px #fff, 0 0 32px #a3bcf9;
+  }
+  50% {
+    transform: translateY(8px) scale(0.98) rotate(2deg);
+    color: #e0e7ff;
+    text-shadow: 0 0 12px #a3bcf9, 0 0 24px #fff;
+  }
+  60% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    color: #fff;
+    text-shadow: 0 0 24px #fff, 0 0 32px #a3bcf9;
+  }
 }
 
 .subtitle {
